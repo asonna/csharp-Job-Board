@@ -4,40 +4,47 @@ namespace JobBoard.Objects
 {
   public class Job
   {
-    private string _makeModel;
-    private int _year;
-    private int _price;
+    private string _title;
+    private string _description;
+    private string _contactInfo;
 
-    private static List<Car> _carList = new List<Car> {};
+    private static List<Job> _jobList = new List<Job> {};
 
-    public Car (string makeModel, int year,int price)
+    public Job (string title, string description, string contactInfo)
     {
-      _makeModel = makeModel;
-      _year = year;
-      _price = price;
-    }
-
-    public void SetMakeModel(string newMakeModel)
-    {
-      _makeModel = newMakeModel;
-    }
-    public string GetMakeModel()
-    {
-      return _makeModel;
+      _title = title;
+      _description = description;
+      _contactInfo = contactInfo;
     }
 
+    public void SetTitle(string newTitle)
+    {
+      _title = newTitle;
+    }
+    public string GetTitle()
+    {
+      return _title;
+    }
 
-    public void AddToCarList()
+    public void SetDescription(string newDescription)
     {
-      _carList.Add(this);
+      _description = newDescription;
     }
-    public static List<Car> ViewCarList()
+    public string GetDescription()
     {
-      return _carList;
+      return _description;
     }
-    public static void ClearCarList()
+
+    public void SetContactInfo(string newContactInfo)
     {
-      _carList.Clear();
+      _contactInfo = newContactInfo;
     }
+    public string GetContactInfo()
+    {
+      return _contactInfo;
+    }
+
+    
+
   }
 }
