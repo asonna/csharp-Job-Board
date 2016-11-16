@@ -1,0 +1,17 @@
+<h1>PORTLAND JOB BOARD</h1>
+
+<div class="row">
+  <p>Here is the new job you just entered: </p><br>
+  @foreach(var jobInstance in Model)
+  {
+    <br>
+    <p><strong>@jobInstance.GetMakeModel()</strong></p>
+    <p>Year: @jobInstance.GetYear()</p>
+    <p>Price: @jobInstance.GetPrice()</p>
+  }
+
+  <p><a href="addNewJob">Add Another Job</a></p>
+  <form action="/clear_list" method="post">
+    <button type="submit">Clear Inventory</button>
+  </form>
+</div>

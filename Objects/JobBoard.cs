@@ -44,7 +44,19 @@ namespace JobBoard.Objects
       return _contactInfo;
     }
 
-    
+    public void AddToJobList()
+    {
+      _jobList.Add(this);
+    }
 
+    public static List<Job> ViewJobInventory()
+    {
+      return _jobList;
+    }
+
+    public static void ClearJobList()
+    {
+      _jobList.Clear();
+    }
   }
 }
